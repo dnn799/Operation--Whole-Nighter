@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+!lwjgl.jar
+!lwjgl_util.jar
+!slick-util.jar
