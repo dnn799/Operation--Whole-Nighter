@@ -7,14 +7,9 @@ import game.common.Player;
  *
  */
 public class ClientPlayer extends Player {
-
-	@Override
-	public void update() {
-		//try to read from recievedBuffer using lock system
-		//update local state accordingly
-		//read from keyboard
-		//update local state accordingly(?)
-		//create new thread to send to buffer
-	}
+	ClientPlayerSender mySender;
+	//read from keyboard
+	//update local state accordingly(blocking call need new thread methinks)
+	
 
 }

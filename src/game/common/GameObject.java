@@ -1,12 +1,11 @@
-package game.common.engine;
+package game.common;
+
+import game.common.engine.Drawable;
 
 import org.newdawn.slick.opengl.Texture;
 
-public abstract class GameObject implements Drawable, Updateable{
-	private float coordX;//Variable used to store onscreen location in X.
-	private float coordY;//Variable used to store onscreen location in Y.
-	private float dimX;//Variable used to store the size of the game object in X.
-	private float dimY;//Variable used to store the size of the game object in Y.
+public abstract class GameObject implements Drawable{
+	GameObjectValues gov;
 	private Texture texture=null;
 	/**
 	 * @return the texture
@@ -24,49 +23,49 @@ public abstract class GameObject implements Drawable, Updateable{
 	 * @return the coordX
 	 */
 	public float getCoordX() {
-		return coordX;
+		return gov.coordX.get();
 	}
 	/**
 	 * @param coordX the coordX to set
 	 */
 	public void setCoordX(float coordX) {
-		this.coordX = coordX;
+		this.gov.coordX.set(coordX);
 	}
 	/**
 	 * @return the coordY
 	 */
 	public float getCoordY() {
-		return coordY;
+		return gov.coordY.get();
 	}
 	/**
 	 * @param coordY the coordY to set
 	 */
 	public void setCoordY(float coordY) {
-		this.coordY = coordY;
+		this.gov.coordY.set(coordY);
 	}
 	/**
 	 * @return the dimY
 	 */
 	public float getDimY() {
-		return dimY;
+		return gov.dimY.get();
 	}
 	/**
 	 * @param dimY the dimY to set
 	 */
 	public void setDimY(float dimY) {
-		this.dimY = dimY;
+		this.gov.dimY.set(dimY);
 	}
 	/**
 	 * @return the dimX
 	 */
 	public float getDimX() {
-		return dimX;
+		return gov.dimX.get();
 	}
 	/**
 	 * @param dimX the dimX to set
 	 */
 	public void setDimX(float dimX) {
-		this.dimX = dimX;
+		this.gov.dimX.set(dimX);
 	}
 
 }

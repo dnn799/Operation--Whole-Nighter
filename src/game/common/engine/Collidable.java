@@ -1,5 +1,7 @@
 package game.common.engine;
 
+import game.common.GameObject;
+
 
 /**
  * Interface implemented by all collision capable game objects.

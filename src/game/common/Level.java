@@ -11,9 +11,7 @@ public class Level {
 	ArrayList<Wall> walls;
 	
 	public void update(){
-		for(Player p:players){
-			p.update();
-		}
+		
 	}
 
 }
