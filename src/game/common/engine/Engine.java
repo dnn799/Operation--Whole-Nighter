@@ -13,12 +13,10 @@ import static org.lwjgl.opengl.GL11.glEnable;
 import static org.lwjgl.opengl.GL11.glLoadIdentity;
 import static org.lwjgl.opengl.GL11.glMatrixMode;
 import static org.lwjgl.opengl.GL11.glOrtho;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
-
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
@@ -37,8 +35,6 @@ public class Engine {
 			
 			Display.setFullscreen(true);//set to fullscreen.
 			Display.create();//init the Display object.
-			System.out.println(Display.getDisplayMode().getBitsPerPixel());
-			System.out.println(Display.getDisplayMode().getFrequency());
 			Display.setVSyncEnabled(true);//enable Vsync to avoid visual glitches.
 			
 			/*
