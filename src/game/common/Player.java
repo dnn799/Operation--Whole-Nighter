@@ -1,6 +1,6 @@
 package game.common;
 
-import game.engine.GameObject;
+import game.common.engine.GameObject;
 
 /**
  * Parent class for server and client player

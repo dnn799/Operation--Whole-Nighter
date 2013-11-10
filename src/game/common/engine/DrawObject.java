@@ -1,4 +1,4 @@
-package game.engine;
+package game.common.engine;
 import static org.lwjgl.opengl.GL11.*;
 
 

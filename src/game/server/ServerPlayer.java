@@ -8,9 +8,9 @@ import game.common.Player;
  */
 public class ServerPlayer extends Player {
 	public void update(){
-		//read recieved buffer
-		//send via send buffer
+		//try to read recieved buffer using lock system
 		//update stats accordingly
+		//create new thread to send via send buffer
 	}
 
 }

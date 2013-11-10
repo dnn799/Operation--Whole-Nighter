@@ -1,4 +1,4 @@
-package game.engine;
+package game.common.engine;
 
 import org.newdawn.slick.opengl.Texture;
 

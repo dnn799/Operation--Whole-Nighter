@@ -10,8 +10,11 @@ public class ClientPlayer extends Player {
 
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
-
+		//try to read from recievedBuffer using lock system
+		//update local state accordingly
+		//read from keyboard
+		//update local state accordingly(?)
+		//create new thread to send to buffer
 	}
 
 }

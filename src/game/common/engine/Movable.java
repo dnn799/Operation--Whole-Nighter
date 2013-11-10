@@ -1,4 +1,4 @@
-package game.engine;
+package game.common.engine;
 
 /**
  * Interface implemented by all movable game objects.
