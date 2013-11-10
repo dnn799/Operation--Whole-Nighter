@@ -1,6 +1,5 @@
 package game.common;
 
-import game.client.PlayerValues;
 import game.common.network.NetworkElement;
 
 /**
@@ -10,6 +9,7 @@ import game.common.network.NetworkElement;
 public abstract class Player extends GameObject{
 	private NetworkElement<PlayerValues> myNetworkElement;
 	private PlayerValues myStats;
+	public ConcurrentCircularBuffer<PlayerValues> myBuffer;
 	public void render() {
 		// TODO Auto-generated method stub
 		

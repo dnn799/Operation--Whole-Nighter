@@ -1,6 +1,5 @@
-package game.client;
+package game.common;
 
-import game.common.GameObjectValues;
 
 public class PlayerValues extends GameObjectValues {
 

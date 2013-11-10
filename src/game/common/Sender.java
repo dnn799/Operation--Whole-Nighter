@@ -1,10 +1,12 @@
-package game.client;
+package game.common;
 
-public class ClientPlayerSender extends Thread {
+import game.client.ClientPlayer;
+
+public class Sender extends Thread {
 	ClientPlayer owner;
 	
 	
-	public ClientPlayerSender(ClientPlayer owner) {
+	public Sender(ClientPlayer owner) {
 		super();
 		this.owner = owner;
 	}
