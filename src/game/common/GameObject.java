@@ -5,7 +5,7 @@ import game.common.engine.Drawable;
 import org.newdawn.slick.opengl.Texture;
 
 public abstract class GameObject implements Drawable{
-	GameObjectValues gov;
+	GameObjectValues myStats;
 	private Texture texture=null;
 	/**
 	 * @return the texture
@@ -23,49 +23,49 @@ public abstract class GameObject implements Drawable{
 	 * @return the coordX
 	 */
 	public float getCoordX() {
-		return gov.coordX.get();
+		return myStats.coordX.get();
 	}
 	/**
 	 * @param coordX the coordX to set
 	 */
 	public void setCoordX(float coordX) {
-		this.gov.coordX.set(coordX);
+		this.myStats.coordX.set(coordX);
 	}
 	/**
 	 * @return the coordY
 	 */
 	public float getCoordY() {
-		return gov.coordY.get();
+		return myStats.coordY.get();
 	}
 	/**
 	 * @param coordY the coordY to set
 	 */
 	public void setCoordY(float coordY) {
-		this.gov.coordY.set(coordY);
+		this.myStats.coordY.set(coordY);
 	}
 	/**
 	 * @return the dimY
 	 */
 	public float getDimY() {
-		return gov.dimY.get();
+		return myStats.dimY.get();
 	}
 	/**
 	 * @param dimY the dimY to set
 	 */
 	public void setDimY(float dimY) {
-		this.gov.dimY.set(dimY);
+		this.myStats.dimY.set(dimY);
 	}
 	/**
 	 * @return the dimX
 	 */
 	public float getDimX() {
-		return gov.dimX.get();
+		return myStats.dimX.get();
 	}
 	/**
 	 * @param dimX the dimX to set
 	 */
 	public void setDimX(float dimX) {
-		this.gov.dimX.set(dimX);
+		this.myStats.dimX.set(dimX);
 	}
 
 }

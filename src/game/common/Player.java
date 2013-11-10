@@ -1,17 +1,28 @@
 package game.common;
 
 import game.common.network.NetworkElement;
+import game.common.network.Sendable;
 
 /**
  * Parent class for server and client player
  *
  */
-public abstract class Player extends GameObject{
+public abstract class Player extends GameObject implements Sendable{
 	private NetworkElement<PlayerValues> myNetworkElement;
 	private PlayerValues myStats;
 	public ConcurrentCircularBuffer<PlayerValues> myBuffer;
 	public void render() {
 		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public ConcurrentCircularBuffer<PlayerValues> getMyBuffer() {
+		return myBuffer;
+	}
+	@Override
+	public void setMyStats(GameObjectValues stats) {
+		myStats=(PlayerValues) stats;
 		
 	}
 	/**
@@ -29,7 +40,7 @@ public abstract class Player extends GameObject{
 	/**
 	 * @return the myStats
 	 */
-	public PlayerValues getMyStats() {
+	public GameObjectValues getMyStats() {
 		return myStats;
 	}
 	/**

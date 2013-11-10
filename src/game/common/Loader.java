@@ -1,14 +1,15 @@
 package game.common;
 
-import game.server.ServerPlayer;
+import game.common.network.Sendable;
+
 
 public class Loader extends Thread {
-	Player owner;
+	Sendable owner;
 	
 	
 	
 	
-	public Loader(ServerPlayer owner) {
+	public Loader(Sendable owner) {
 		super();
 		this.owner = owner;
 	}
@@ -19,7 +20,7 @@ public class Loader extends Thread {
 	public void run() {
 		while(true){
 			try {
-				owner.setMyStats(owner.myBuffer.pop());
+				owner.setMyStats((GameObjectValues) owner.getMyBuffer().pop());
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

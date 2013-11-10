@@ -1,22 +1,25 @@
 package game.common;
 
+import game.common.network.Sendable;
+
 
 public class Receiver extends Thread {
-	Player owner;
+	Sendable owner;
 	
 	
 	
-	public Receiver(Player owner) {
+	public Receiver(Sendable owner) {
 		super();
 		this.owner = owner;
 	}
 
 
 
+	@SuppressWarnings("unchecked")
 	public void run(){
 		while(true){
 			try {
-				owner.myBuffer.push(owner.getMyNetworkElement().receive());
+				owner.getMyBuffer().push(owner.getMyNetworkElement().receive());
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

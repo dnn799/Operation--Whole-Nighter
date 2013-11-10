@@ -1,5 +1,5 @@
 package game.common;
 
-public class LevelValues {
+public class LevelValues extends GameObjectValues{
 
 }
