@@ -13,7 +13,7 @@ public class Server {
 		//while(1 && !terminated)//server runs forever
 		//create world
 		//start listening for connections
-		//when a connection occurs create a daemon to manage that connection
+		//when a connection occurs create a ServerPlayer(daemon) to manage that connection
 		//when all players are ready, go into game loop
 		//gameloop
 		//update level
