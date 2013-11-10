@@ -10,8 +10,6 @@ import java.util.ArrayList;
  * NOTE: maybe branch level into ClientLevel and ServerLevel, have ClientLevel do the heavy lifting and have ServerLevel just do checksums to keep load off server
  */
 public abstract class Level implements Sendable{
-	ArrayList<Player> players;
-	ArrayList<Wall> walls;
 	LevelValues myStats;
 	ConcurrentCircularBuffer<LevelValues> myBuffer;
 	NetworkElement<LevelValues> myNetworkElement;
