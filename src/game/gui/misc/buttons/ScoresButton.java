@@ -1,4 +1,4 @@
-package game.gui.buttons;
+package game.gui.misc.buttons;
 
 import java.io.File;
 import java.io.FileInputStream;

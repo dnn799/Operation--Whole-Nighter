@@ -1,7 +1,8 @@
 package game.gui.menus;
 
-import game.gui.menus.misc.BasicFrame;
-import game.gui.buttons.*;
+import game.gui.menus.misc.frames.BasicFrame;
+import game.gui.misc.buttons.*;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

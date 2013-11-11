@@ -1,6 +1,6 @@
-package game.gui.menus.misc;
+package game.gui.menus.misc.checkboxes;
 
-import game.gui.buttons.Button;
+import game.gui.misc.buttons.Button;
 
 import java.io.File;
 import java.io.FileInputStream;

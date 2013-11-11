@@ -19,10 +19,14 @@ import game.gui.menus.NewGameMenu;
 import game.gui.menus.SettingsScreen;
 
 public class RaceGame {
-	private static boolean terminate=false;
-	private static long keyTriggered=0l;
-	static ClientLevel myLevel=null;
-	static GameState currentState;
+	private static boolean terminate=false;//flag to keep track if the user hit esc key
+	private static long keyTriggered=0l;//cooldown timer for kyeboard presses
+	static ClientLevel myLevel=null;//the current level
+	static GameState currentState;//the current game state
+	/*
+	 * The game screens.
+	 * ===========================================================
+	 */
 	private static Menu myCreateGameScreen=new CreateGameScreen();
 	private static Menu myExitGameDialog=new ExitGameDialog();
 	private static Menu myJoinGameScreen=new JoinGameScreen();
@@ -30,6 +34,9 @@ public class RaceGame {
 	private static Menu myNetworkMenu=new NetworkMenu();
 	private static Menu myNewGameMenu=new NewGameMenu();
 	private static Menu mySettingsScreen=new SettingsScreen();
+	/*
+	 * ===========================================================
+	 */
 
 	public static void start() {
 		while((!Display.isCloseRequested())&&!terminate) {//if ESCAPE hasn't been hit and the display hasn't been closed otherwise

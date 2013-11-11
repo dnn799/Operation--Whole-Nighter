@@ -1,4 +1,4 @@
-package game.gui.menus.misc;
+package game.gui.menus.misc.dropdown;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

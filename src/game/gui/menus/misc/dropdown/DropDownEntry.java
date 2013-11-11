@@ -1,6 +1,6 @@
-package game.gui.menus.misc;
+package game.gui.menus.misc.dropdown;
 
-import game.gui.buttons.Button;
+import game.gui.misc.buttons.Button;
 
 import org.newdawn.slick.opengl.Texture;
 

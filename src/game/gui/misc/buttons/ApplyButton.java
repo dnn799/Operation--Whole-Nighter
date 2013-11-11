@@ -1,9 +1,9 @@
-package game.gui.buttons;
+package game.gui.misc.buttons;
 
 import game.GameState;
 import game.RaceGame;
-import game.gui.menus.misc.ColorsBox;
-import game.gui.menus.misc.ResEntry;
+import game.gui.menus.misc.checkboxes.ColorsBox;
+import game.gui.menus.misc.dropdown.ResEntry;
 
 import java.io.BufferedWriter;
 import java.io.File;

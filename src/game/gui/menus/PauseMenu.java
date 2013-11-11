@@ -3,8 +3,9 @@ package game.gui.menus;
 import static org.lwjgl.opengl.GL11.glColor4f;
 import game.RaceGame;
 import game.common.engine.DrawObject;
-import game.gui.menus.misc.BasicFrame;
-import game.gui.buttons.*;
+import game.gui.menus.misc.frames.BasicFrame;
+import game.gui.misc.buttons.*;
+
 import java.util.ArrayList;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;

@@ -1,4 +1,4 @@
-package game.gui.buttons;
+package game.gui.misc.buttons;
 
 //import static org.lwjgl.opengl.GL11.glColor3f;
 

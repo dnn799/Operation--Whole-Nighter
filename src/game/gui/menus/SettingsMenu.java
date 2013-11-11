@@ -1,24 +1,25 @@
 package game.gui.menus;
 
-import game.gui.buttons.ApplyButton;
-import game.gui.buttons.Button;
-import game.gui.buttons.CancelButton;
-import game.gui.menus.misc.CheckBox;
-import game.gui.menus.misc.ColorsBox;
-import game.gui.menus.misc.DisplayDropDown;
-import game.gui.menus.misc.DropDown;
-import game.gui.menus.misc.SettingsFrame;
+import game.gui.menus.misc.checkboxes.CheckBox;
+import game.gui.menus.misc.checkboxes.ColorsBox;
+import game.gui.menus.misc.dropdown.DisplayDropDown;
+import game.gui.menus.misc.dropdown.DropDown;
+import game.gui.menus.misc.frames.SettingsFrame;
+import game.gui.misc.buttons.ApplyButton;
+import game.gui.misc.buttons.Button;
+import game.gui.misc.buttons.CancelButton;
 
 import java.util.ArrayList;
 import org.lwjgl.opengl.Display;
 
 public class SettingsMenu extends Menu {
+	ArrayList<CheckBox> myCheckBoxes;
+	ArrayList<DropDown> myDropDowns;
+	
+	
 	@Override
-	public void render() {
-		myFrame.render();
-		for(Button b:myButtons){
-			b.render();
-		}
+	public void render() {//since the settings menu has checkboxes and dropdowns as well as buttons render needs to be changed
+		super.render();
 		for(CheckBox c:myCheckBoxes){
 			c.render();
 		}
@@ -28,7 +29,7 @@ public class SettingsMenu extends Menu {
 	}
 
 	@Override
-	public void update() {
+	public void update() {//since the settings menu has checkboxes and dropdowns as well as buttons update needs to be changed
 		super.update();
 		for(CheckBox c:myCheckBoxes){
 			c.update();
@@ -38,9 +39,7 @@ public class SettingsMenu extends Menu {
 		}
 	}
 
-	ArrayList<CheckBox> myCheckBoxes;
-	ArrayList<DropDown> myDropDowns;
-
+	
 	public SettingsMenu() {
 		super();
 		myButtons=new ArrayList<Button>();

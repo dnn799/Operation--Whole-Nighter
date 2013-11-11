@@ -1,4 +1,4 @@
-package game.gui.buttons;
+package game.gui.misc.buttons;
 
 import game.GameState;
 import game.RaceGame;
@@ -10,14 +10,15 @@ import java.io.IOException;
 import org.newdawn.slick.opengl.TextureLoader;
 
 
-public class SettingsButton extends Button {
 
+public class NewGameButton extends Button {
 
-	public SettingsButton(float coordX, float coordY, float dimX, float dimY) {
+	
+	public NewGameButton(float coordX, float coordY, float dimX, float dimY) {
 		super(coordX, coordY, dimX, dimY);
 		try {
-			myTexture=TextureLoader.getTexture("PNG", new FileInputStream(new File("res/settingsButton.png")));
-			pressedTexture=TextureLoader.getTexture("PNG", new FileInputStream(new File("res/settingsButton.png")));
+			myTexture=TextureLoader.getTexture("PNG", new FileInputStream(new File("res/newGameButton.png")));
+			pressedTexture=TextureLoader.getTexture("PNG", new FileInputStream(new File("res/newGameButton.png")));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -25,10 +26,10 @@ public class SettingsButton extends Button {
 		}
 		
 	}
+
 	@Override
 	public void pressed() {
-		RaceGame.setCurrentGameState(GameState.SettingsScreen);
-		
+		RaceGame.setCurrentGameState(GameState.NewGameMenu);
 	}
 
 }
