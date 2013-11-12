@@ -1,8 +1,6 @@
 package game.gui.menus.misc.dropdown;
 
 
-import game.common.engine.DrawObject;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -45,10 +43,6 @@ public class ResEntry extends DropDownEntry {
 	@Override
 	public void pressed() {
 		setRes=this;
-	}
-	@Override
-	public void render() {
-		DrawObject.draw(this);
 	}
 	/**
 	 * @return the setRes
