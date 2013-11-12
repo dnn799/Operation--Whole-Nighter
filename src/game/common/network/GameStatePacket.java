@@ -6,7 +6,7 @@ public class GameStatePacket extends Packet {
 	private GameObject myGameObjectInfo[];
 	private int numOfGameObjects;
 	
-	GameStatePacket(){numOfGameObjects=0;}
+	GameStatePacket(){super(); numOfGameObjects=0;}
 	
 	public void add(GameObject O){myGameObjectInfo[numOfGameObjects++]=O;}
 	public GameObject get(){return myGameObjectInfo[numOfGameObjects--];}

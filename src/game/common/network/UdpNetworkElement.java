@@ -7,11 +7,13 @@ import java.net.InetAddress;
 
 public class UdpNetworkElement extends NetworkElement {
 	private DatagramSocket mySocket;
-	private int myPort;
 	
-	UdpNetworkElement(){
+	
+	UdpNetworkElement(int port){
+		super();
+		if(port==0)port=freePort++;
 		try{
-			mySocket=new DatagramSocket(myPort=freePort++);
+			mySocket=new DatagramSocket(myPort=port);
 		}catch(Exception E){System.out.print("Port unavailable");}
 	}
 
@@ -19,12 +21,18 @@ public class UdpNetworkElement extends NetworkElement {
 		mySocket.connect(ip, port);
 	}
 	
+	
+	
 	public void destroy(){
 		mySocket.close();
 	}
 	
 	public void send(Packet data){
 		
+	}
+	
+	public Packet receive(){
+		return null;
 	}
 
 }
