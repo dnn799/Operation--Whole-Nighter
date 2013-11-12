@@ -22,7 +22,7 @@ public class RaceGame {
 	private static boolean terminate=false;//flag to keep track if the user hit esc key
 	private static long keyTriggered=0l;//cooldown timer for kyeboard presses
 	static ClientLevel myLevel=null;//the current level
-	static GameState currentState;//the current game state
+	static GameState currentState=GameState.MainMenu;//the current game state
 	/*
 	 * The game screens.
 	 * ===========================================================

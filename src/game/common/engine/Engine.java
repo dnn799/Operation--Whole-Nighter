@@ -33,7 +33,7 @@ public class Engine {
 			
 			Display.setDisplayMode(getDisplayModeFromFile());
 			
-			Display.setFullscreen(true);//set to fullscreen.
+			Display.setFullscreen(false);//set to fullscreen.
 			Display.create();//init the Display object.
 			Display.setVSyncEnabled(true);//enable Vsync to avoid visual glitches.
 			
@@ -42,7 +42,7 @@ public class Engine {
 			 */
 			glMatrixMode(GL_PROJECTION);//choose the GL_PROJECTION matrix,
 			glLoadIdentity();//and clear it.
-			glOrtho(0,Display.getWidth(),0,Display.getHeight(),-1,1);//set the view to the initial plane.
+			glOrtho(0,Display.getWidth(),Display.getHeight(),0,-1,1);//set the view to the initial plane.
 			glMatrixMode(GL_MODELVIEW);//choose the GL_MODELVIEW matrix.
 			glClearColor(0,0,0,1);//set background to black.
 			glDisable(GL_DEPTH_TEST);//disable GL_DEPTH_TEST because the z axis is unused.
