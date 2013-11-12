@@ -3,8 +3,8 @@ package game.gui.menus;
 import game.common.engine.DrawObject;
 import game.common.engine.Drawable;
 import game.common.engine.Updateable;
-import game.gui.buttons.Button;
-import game.gui.menus.misc.Frame;
+import game.gui.menus.misc.frames.Frame;
+import game.gui.misc.buttons.Button;
 
 import java.util.ArrayList;
 
@@ -14,18 +14,18 @@ import org.newdawn.slick.opengl.Texture;
 
 
 public abstract class Menu implements Drawable, Updateable{
-	protected ArrayList<Button> myButtons;
-	protected Texture background;
-	protected Frame myFrame;
-	private static long menuCalled;
+	protected ArrayList<Button> myButtons;//The buttons in the menu
+	protected Texture background;//The menu background
+	protected Frame myFrame;//The menu frame (the thing around the buttons)
+	private static long menuCalled;//cooldown timer for menu buttons
 	
 	@Override
 	public void render() {
-		Mouse.setGrabbed(false);
-		DrawObject.draw(this);
-		myFrame.render();
+		Mouse.setGrabbed(false);//show the mouse
+		DrawObject.draw(this);//draw the background
+		myFrame.render();//draw the frame
 		for (Button b:myButtons)
-			b.render();		
+			b.render();//draw the buttons
 	}
 	@Override
 	public Texture getTexture() {
@@ -50,12 +50,12 @@ public abstract class Menu implements Drawable, Updateable{
 	@Override
 	public void update() {
 		if(System.nanoTime()<(long)menuCalled+(long)125000000){	
-			Mouse.next();
+			Mouse.next();//if the cooldown hasn't passed flip to next mouse event.
 		}
 		else{
 			while(Mouse.next()){
 				for(Button b:myButtons){
-					b.update();
+					b.update();//else check if any of the buttons were pressed.
 				}
 			}
 		}

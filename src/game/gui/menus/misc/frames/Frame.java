@@ -1,4 +1,4 @@
-package game.gui.menus.misc;
+package game.gui.menus.misc.frames;
 
 
 import game.common.engine.DrawObject;

@@ -1,6 +1,6 @@
-package game.gui.menus.misc;
+package game.gui.menus.misc.checkboxes;
 
-import game.gui.buttons.Button;
+import game.gui.misc.buttons.Button;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ public abstract class CheckBox extends Button{
 	boolean isChecked=false;
 	Texture checked;
 	public CheckBox(float coordX, float coordY, float dimX, float dimY) {
-		super(coordX, coordY, dimX, dimY);
+		super(coordX, coordY, dimX, dimY,"");
 		try {
 			myTexture=TextureLoader.getTexture("PNG", new FileInputStream(new File("res/checkBox.png")));
 			checked=TextureLoader.getTexture("PNG", new FileInputStream(new File("res/checkBoxChecked.png")));

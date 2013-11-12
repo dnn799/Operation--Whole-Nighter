@@ -1,4 +1,4 @@
-package game.gui.menus.misc;
+package game.gui.menus.misc.checkboxes;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
