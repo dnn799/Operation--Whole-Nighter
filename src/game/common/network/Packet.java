@@ -1,8 +1,9 @@
 package game.common.network;
 
-import game.common.GameObject;
+import java.io.*;
 
-public abstract class Packet {
+public abstract class Packet implements Serializable {
+	
 	private int myPort;
 	private long timeStamp;
 
