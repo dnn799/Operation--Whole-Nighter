@@ -12,5 +12,22 @@ public abstract class Packet implements Serializable {
 	private void setTime(){timeStamp=System.currentTimeMillis();}
 	
 	public long getTime(){return timeStamp;}
+	
+	public byte[] writeMe(){
+		
+		try {
+			
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			ObjectOutputStream oout = new ObjectOutputStream(out);
+			
+			oout.writeObject(this);
+			
+			return out.toByteArray();
+		
+		} catch (Exception e) {e.printStackTrace();}
+		
+		return null;
+	}
+	
 
 }
